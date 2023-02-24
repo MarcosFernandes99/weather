@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    background: linear-gradient(240deg, rgb(57, 62, 124) 0%, rgb(7, 158, 196) 100%);
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.search{
+    margin-top: 2rem;
+}
+.city-input{
+    height: 1.5rem;
+}
+
+.btnSearch{
+    height: 1.9rem;
+    margin-left: 1vw;
+    padding: 0rem 0.3rem;
+    cursor: pointer;
+}
