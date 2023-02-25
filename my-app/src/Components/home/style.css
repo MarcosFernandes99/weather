@@ -9,15 +9,20 @@ body{
     height: 100vh;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}
-
 .search{
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
+
+.week{
+    text-align: left;
+    color: white;
+    margin-top: 5vh;
+    margin-left: 19vw;
+}
+
 .city-input{
     height: 1.5rem;
 }
