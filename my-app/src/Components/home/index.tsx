@@ -24,7 +24,7 @@ export const Container = () => {
                     data: dateBr,
                     temp_max: item.main.temp_max,
                     temp_min: item.main.temp_min,
-                    description: item.weather[0].description,
+                    description: item.weather[0].icon,
                 };
             }
             return result;
@@ -56,7 +56,7 @@ export const Container = () => {
                             <span className='day'>{data}</span>
                             <span className='day tempMax'>⬆ {temp_max.toFixed(0)}°</span>
                             <span className='day tempMin'>⬇ {temp_min.toFixed(0)}° </span>
-                            <span className='day'>{description}</span>
+                            <span className='day'><img className='imageTemp' src={`https://openweathermap.org/img/wn/${description}@2x.png`} alt="imageTemp"/></span>
                         </div>
                     );
                 })}

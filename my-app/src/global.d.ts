@@ -3,6 +3,6 @@ interface IWeather {
         data: string;
         temp_max: number;
         temp_min: number;
-        description: string;
+        description: number;
     };
 }

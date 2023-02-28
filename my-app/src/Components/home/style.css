@@ -50,12 +50,12 @@ body{
 .days{
     display: flex;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 0.5rem;
 }
 .day{
-    margin-top: 3vh;
     color: rgb(0, 0, 0);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-top: 2vh;
 }
 
 .tempMax{
@@ -66,3 +66,6 @@ body{
     color: blue;
 }
 
+.imageTemp{
+    height: 3rem;
+}
