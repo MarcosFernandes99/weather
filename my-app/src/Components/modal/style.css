@@ -1,0 +1,22 @@
+.modalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.950);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.modal {
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background-color: rgb(97, 97, 97);
+    position: absolute;
+}
+
+.exit{
+    margin-left: 90vw;
+}

@@ -1,15 +1,24 @@
 import { useState } from 'react'
-import axios from 'axios'
 import "./style.css"
+import { setModal } from '../store/redux.modal/actions'
+import store from '../store'
+import { ModalDay } from '../modal'
+import getWeatherData from "../../services/getWeatherData"
+import getWeatherList from '../../services/getWeatherList'
 
 export const Container = () => {
 
     const [city, setCity] = useState<string>('')
     const [dataApi, setDataApi] = useState<IWeather>({})
-
+    
     const keyCode = "70b0195b4333a58a709b185214fdbcac"
 
-    const searchCity = async () => {
+
+    const toggleModal = (value: string) => {
+        store.dispatch(setModal(value))
+    }
+
+    const searchCity = async () => {        
         const response = await getWeatherData(city, keyCode)
         const filterData = filterWeatherData(response.data)
         setDataApi(filterData)
@@ -33,34 +42,36 @@ export const Container = () => {
         return filterData;
     };
 
-    const getWeatherData = async (city: any, keyCode: string) => {
-        const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${keyCode}&units=metric&lang=pt`)
-        console.log(res)
-        return res
-    }
+    const teste = getWeatherList(city, keyCode)
+   
 
     return (
 
         <section className='container'>
             <h1 className="title">Previsão do tempo</h1>
+
             <div className='search'>
                 <input onChange={(e) => setCity(String(e.target.value))} className='city-input' type="text" placeholder='Digite o nome da cidade' />
                 <button className='btnSearch' onClick={searchCity}>🔎</button>
             </div>
+
             <h3 className='week'>Próxima semana:</h3>
+
             <div className="containerDays">
                 {Object.keys(dataApi).map((key) => {
                     const { data, description, temp_max, temp_min } = dataApi[key];
                     return (
-                        <div className='days' key={data}>
+                        <div onClick={() => toggleModal("true")} className='days' key={data}>
                             <span className='day'>{data}</span>
                             <span className='day tempMax'>⬆ {temp_max.toFixed(0)}°</span>
                             <span className='day tempMin'>⬇ {temp_min.toFixed(0)}° </span>
-                            <span className='day'><img className='imageTemp' src={`https://openweathermap.org/img/wn/${description}@2x.png`} alt="imageTemp"/></span>
+                            <span className='day'><img className='imageTemp' src={`https://openweathermap.org/img/wn/${description}@2x.png`} 
+                            alt="imageTemp" /></span>
                         </div>
                     );
                 })}
             </div>
+            <ModalDay />
         </section>
     )
 }

@@ -6,3 +6,14 @@ interface IWeather {
         description: number;
     };
 }
+
+interface IAction {
+    type: string,
+    payload: any,
+}
+
+interface IState {
+    modal?: {
+        isOpen: string
+    }
+}
