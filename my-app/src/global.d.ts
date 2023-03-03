@@ -12,8 +12,20 @@ interface IAction {
     payload: any,
 }
 
-interface IState {
+interface IStateModal {
     modal?: {
         isOpen: string
+    }
+}
+
+interface IStateCity {
+    city?: {
+        cities: string
+    }
+}
+
+interface IStateDay {
+    day?: {
+        day: string
     }
 }

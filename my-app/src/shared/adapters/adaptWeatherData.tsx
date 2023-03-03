@@ -1,7 +1,8 @@
+import moment from "moment";
 import { IDataList, IWheatherData } from "../../types/dataList.interface"
 
 const adaptWeatherData = (data: IWheatherData): IDataList[] => {
-    const adaptedList: IDataList[] = data.list.map(item => {
+    const adaptedList: IDataList[] = data.list.map(item => {        
         return {
             data: item.dt_txt,
             tempDay: item.main.temp,
@@ -10,7 +11,6 @@ const adaptWeatherData = (data: IWheatherData): IDataList[] => {
             icon: item.weather[0].icon,
         }
     })
-    console.log(adaptedList)
 
     return adaptedList
 }
