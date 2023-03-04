@@ -5,9 +5,7 @@ import { Container } from "./Components/home/index"
 function App() {
 
   return (
-    
       <Container />
-    
   )
 }
 

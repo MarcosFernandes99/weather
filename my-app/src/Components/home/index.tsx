@@ -4,7 +4,6 @@ import { setModal } from '../store/redux.modal/actions'
 import store from '../store'
 import { ModalDay } from '../modal'
 import getWeatherData from "../../services/getWeatherData"
-import getWeatherList from '../../services/getWeatherList'
 import { setCityState } from '../store/redux.city/actions'
 import { setDayState } from '../store/redux.day/actions'
 import moment from 'moment'
