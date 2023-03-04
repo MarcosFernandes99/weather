@@ -1,4 +1,3 @@
-import moment from "moment";
 import { IDataList, IWheatherData } from "../../types/dataList.interface"
 
 const adaptWeatherData = (data: IWheatherData): IDataList[] => {
