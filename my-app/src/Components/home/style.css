@@ -1,22 +1,21 @@
 *{
     padding: 0;
     margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
-    background-color: rgb(231, 229, 229);
+    background-color: rgb(10, 12, 44);
     height: 100vh;
-}
-.container{
-    height: 100%;
     overflow-y: hidden;
 }
 
+
 .title{
     text-align: center;
-    margin-top: 1vh;
+    margin-top: 2vh;
     font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .search{
@@ -38,7 +37,7 @@ body{
 
 .btnSearch{
     cursor: pointer;
-    background: none;
+    background:white;
     border-radius: 1rem;
     min-height: 7vh;
     min-width: 3rem;
@@ -46,7 +45,7 @@ body{
 
 .week{
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-top: 5vh;
     font-size: 2rem;
 }
@@ -56,11 +55,11 @@ body{
     justify-content: space-between;
     padding: 0.5rem;
     align-items: center;
+    
 }
-.day{
-    color: rgb(0, 0, 0);
+.day{    
     font-size: 1.3rem;
-    margin-top: 2vh;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
