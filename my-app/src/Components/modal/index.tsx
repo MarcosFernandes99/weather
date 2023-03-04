@@ -53,11 +53,22 @@ export const ModalDay = () => {
 
                                 <div className="tempDayContainer">
                                     <span className='tempDay'>{currentDayData[0].tempDay.toFixed(0)}°</span>
-                                    <span className='tempDayOther'>⬆{currentDayData[0].tempMax.toFixed(0)}°</span>
-                                    <span className='tempDayOther'>⬇{currentDayData[0].tempMin.toFixed(0)}°</span>  
-                                </div>                              
-                                
-                                <div className="alongTheDay">bbbbb</div>
+                                    <div className='tempDayOther'>
+                                        <span >⬆{currentDayData[0].tempMax.toFixed(0)}°</span>
+                                        <span >⬇{currentDayData[0].tempMin.toFixed(0)}°</span>
+                                    </div>
+                                </div>
+                                <div className="alongTheDayContainer">
+                                    {currentDayData.map((item) => (
+                                        <div className='alongDay'>
+                                            <span className='tempAlongDay'>{item.data.substring(11, 13)}h</span>
+                                            <span><img className='imgTemp' src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
+                                                alt="imageTemp" /></span>
+                                            <span className='tempMaxMinAlongDay'>{item.tempMax.toFixed(0)}°</span>
+                                            <span className='tempMaxMinAlongDay'>{item.tempMin.toFixed(0)}°</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>
