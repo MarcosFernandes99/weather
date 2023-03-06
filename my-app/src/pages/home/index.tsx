@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import "./style.css"
-import { setModal } from '../store/redux.modal/actions'
-import store from '../store'
-import { ModalDay } from '../modal'
+import { setModal } from '../../Components/store/redux.modal/actions'
+import store from '../../Components/store'
+import { ModalDay } from '../../Components/modal'
 import getWeatherData from "../../services/getWeatherData"
-import { setCityState } from '../store/redux.city/actions'
-import { setDayState } from '../store/redux.day/actions'
+import { setCityState } from '../../Components/store/redux.city/actions'
+import { setDayState } from '../../Components/store/redux.day/actions'
 import moment from 'moment'
 
 export const Container = () => {

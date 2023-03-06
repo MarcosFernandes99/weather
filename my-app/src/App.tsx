@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from "./Components/home/index"
+import { Container } from "./pages/home/index"
 
 
 function App() {
