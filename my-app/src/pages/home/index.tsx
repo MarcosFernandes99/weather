@@ -8,7 +8,7 @@ import { setCityState } from '../../Components/store/redux.city/actions'
 import { setDayState } from '../../Components/store/redux.day/actions'
 import moment from 'moment'
 
-export const Container = () => {
+export const Home = () => {
 
     const [city, setCity] = useState<string>('')
     const [dataApi, setDataApi] = useState<IWeather>({})
